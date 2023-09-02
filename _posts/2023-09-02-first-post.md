@@ -1,6 +1,6 @@
 ---
 title: 'My First Post: What To Expect?'
-author: Brittan Reichley
+author: btreich
 date: 2023-09-02 14:00:00 -0400
 categories: [Miscellenous]
 tags: [Miscellenous]
