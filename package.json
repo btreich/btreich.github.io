@@ -12,6 +12,8 @@
   "type": "module",
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
+    "markdown-it": "^14.1.0",
+    "markdown-it-anchor": "^9.2.0",
     "netlify-plugin-cache": "^1.0.3"
   }
 }
