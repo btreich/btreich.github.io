@@ -8,7 +8,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     permissions:
       contents: write
     concurrency:
@@ -19,7 +19,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: "18"
+          node-version: current
 
       - name: Persist npm cache
         uses: actions/cache@v3
@@ -37,12 +37,20 @@ jobs:
       - run: npm run build-ghpages
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v3.8.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+<<<<<<< HEAD
 <<<<<<< HEAD
           publish_dir: ./_site
 =======
           publish_dir: ./_site
 >>>>>>> cdfe20a (Create initial deployment workflow for github pages)
+=======
+          #publish_dir is the folder on the docker instance which eleventy builds the pages to.
+          #it is not the docs folder in the repository
+          publish_dir: dist
+          #publish_branch is the branch in the repository.
+          #this is where you need to point GitHub pages
+          publish_branch: gh-pages
+>>>>>>> 39b4018 (Remove blog assets from main and update deploy workflow)
