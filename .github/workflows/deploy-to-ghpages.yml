@@ -41,4 +41,8 @@ jobs:
         if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+<<<<<<< HEAD
           publish_dir: ./_site
+=======
+          publish_dir: ./_site
+>>>>>>> cdfe20a (Create initial deployment workflow for github pages)
